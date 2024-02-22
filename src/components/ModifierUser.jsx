@@ -5,7 +5,7 @@ import { updateUser } from "./UsersSlice"
 
 const ModifierUser=()=>{
     const {id} = useParams()
-    const data = useSelector(state=>state.users.list)
+    const data = useSelector(state=>state.users)
     const user = data.find(user=>user.id==id)
 
     const [nom,setNom] = useState(user.nom)

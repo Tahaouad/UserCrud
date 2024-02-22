@@ -14,7 +14,7 @@ const AjouterUser =()=>{
 
     const list_loisires = ["Lecture", "Sport", "Peinture", "Cuisine", "Jardinage"]
 
-    const data = useSelector(state=>state.users.list)
+    const data = useSelector(state=>state.users)
     const nav = useNavigate(    )
     const handleLoisir=(v)=>{
         if(!loisires.includes(v)){

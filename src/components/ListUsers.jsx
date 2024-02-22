@@ -3,10 +3,11 @@ import { deleteUser } from "./UsersSlice"
 import { Link } from "react-router-dom"
 
 const ListUsers = () =>{
-    const data = useSelector(state=>state.users.list)
+    const data = useSelector(state=>state.users)
     const dispatch = useDispatch()
      
     const handleDelete = (id) =>{
+        alert(id)
         const ok = window.confirm(`vous etes sur de supprimer `)
         ok&&dispatch(deleteUser(id))
     } 

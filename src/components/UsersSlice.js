@@ -21,19 +21,19 @@ const DBusers = [
 
 const UserSlice = createSlice({
     name :'users',
-    initialState : {list:DBusers},
+    initialState : DBusers,
     reducers : {
         addUser:(state,action)=>{
-            state.list = [...state.list,action.payload]    
+            return [...state,action.payload]    
         },
         deleteUser:(state,action)=>{
 
-            state.list = state.list.filter(user=>user.id !== action.payload)
+            return state.filter(user=>user.id !== action.payload)
 
         },
 
         updateUser:(state,action)=>{
-            state.list = state.list.map(user=>{
+            return state.map(user=>{
                 if(user.id == action.payload.id){
                     return {...user,...action.payload}
                 }else{
