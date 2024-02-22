@@ -12,7 +12,7 @@ function App() {
           <Route index path={'/'} element={<ListUsers />}/>
           <Route path={'/Ajouter'} element={<AjouterUser /> }/>
           <Route path={'/Modifier/:id'} element={<ModifierUser /> }/>
-        </Routes>
+        </Routes> 
       </BrowserRouter>
     </div>
   );
